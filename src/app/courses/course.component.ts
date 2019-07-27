@@ -1,3 +1,4 @@
+import { CoursesService } from './../courses.service';
 // to start working with angular
 // we must first create a component
 // a component is a .ts file
@@ -35,10 +36,52 @@ import { Component } from '@angular/core';
     </ul>
     `
 })
+
+// normally in real world apps we render data from
+// rest apis, to that we use services in Angular
+// One important thinh here is that we only write presentation logic
+// in our component
+// while all the async work is done by services
+
+
+// APPROACH WITHOUT DEPENDECY INJECTION
+// if we instantiate a service in this class
+// we decouple it tightly and if we change
+// the constructor of the service we will have to manually
+// change the constructor all over the application,
+// other problem is that this wont allow us to change data in runtime
+// once the class is instantiated, it cannot be changed.
+
+
+// export class CoursesComponent {
+//   title = 'List of Courses';
+//   courses: string[];
+
+//   constructor()  {
+//     const service = new CoursesService();
+//     this.courses = service.getCourses();
+//   }
+
+//   getTitle(): string {
+//     return this.title;
+//   }
+// }
+
+
+// DEPENDENCY INJECTION
+
 export class CoursesComponent {
   title = 'List of Courses';
-  courses = ['course1', 'course2', 'course3'];
+  courses: string[];
+  // this approach wont work until we add this in our provide at app.component
+  constructor(service: CoursesService)  {
+    // const service = new CoursesService();
+    this.courses = service.getCourses();
+  }
+
   getTitle(): string {
     return this.title;
   }
 }
+
+
