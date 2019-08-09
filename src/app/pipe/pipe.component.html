@@ -1,0 +1,11 @@
+<h1>Pipes</h1>
+<h2>Data for piping</h2>
+
+<p>Upper case pipe: {{ course.name | uppercase }}</p>
+<p>Lower Case pipe: {{ course.name | lowercase }}</p>
+<p>Order of precedence, precendence is higher of later pipe: {{ course.name | uppercase | lowercase }}</p>
+<p>JSON pipe: {{ course | json }}</p>
+<p>Date pipe (Short): {{ course.date | date:shortDate }}</p>
+<p>Date pipe (Custom): {{ course.date | date:"MM/dd/yy" }}</p>
+<p>Currency: {{ course.price | currency:'USD':true }}</p>
+<p>Students: {{ course.students | number }} </p>

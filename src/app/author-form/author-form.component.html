@@ -1,0 +1,10 @@
+<div>
+    <h1>Author Form</h1>
+    <form>
+        <h2>Select from {{authorCount}} Authors</h2>
+        <select>
+            <option selected value="">Choose Author</option>
+            <option *ngFor="let author of authors">{{author}}</option>
+        </select>
+    </form>
+</div>

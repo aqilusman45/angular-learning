@@ -1,0 +1,7 @@
+<h2>{{ "Interpolation: " + getTitle() }}</h2>
+<h2>{{"Property rendering: " + title}}</h2>
+<ul>
+    <li *ngFor="let course of courses">
+        {{course}}
+    </li>
+</ul>

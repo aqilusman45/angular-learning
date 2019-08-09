@@ -1,0 +1,14 @@
+<hr>
+<h1>interpolation works!</h1>
+<p>Render Javascript</p>
+<p>Perform Mathematical Operations, eg. 2 + 2 = <span style="color: red">{{2 + 2}}</span></p>
+<p>Concat strings: <span style="color: red">{{"Hello" + " " + "World"}}</span></p>
+<p>Use template Literals. eg. Class Property. Title: <span style="color: red">{{title}}</span></p>
+<p>Call methods on event, eg <button (click)="setX('haha')">Click Here</button><span style="color: red">{{x}}</span></p>
+<p>Call methods on properties. eg, length of string '{{title}}': <span style="color:red">{{title.length}}</span></p>
+<p>Call methods in class <span style="color:red">{{greeting()}}</span></p>
+<p>Data binding cannot contain assignments, it gives error</p>
+<p>Also we cannot access glocabal objects such as windows from within html template</p>
+<p>However you can assign window object to a variable from the class</p>
+<p>For example to render current url we have a property within a class called "url" and its value is: {{currentUrl}} </p>
+<hr>

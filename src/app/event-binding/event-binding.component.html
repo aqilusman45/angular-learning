@@ -1,0 +1,10 @@
+<h1>Event Binding</h1>
+<p>Syntax for event binding is : ('event')="method()" e.g: (click)="onClick()"</p>
+<p>DOM has abehavior called event bubbling or propogation, it means when there is an event on both perant</p>
+<p>and child element the event will bubble up first rasing the event on child element then on Parent</p>
+<p>to stop these we  have method called ".stopPropogation()" on the event object.</p>
+<p>Further there are several other properties like x and y cordinates for mouse on the event object.</p>
+
+<div (click)="OnClickDiv($event)">
+    <button (click)="OnClickButton($event)">Log Event</button>
+</div>

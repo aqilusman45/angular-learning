@@ -1,0 +1,13 @@
+<h1>Two Way Bindind</h1>
+
+<p>Previous strategy of binding was verbose, it could be done better with two way binding.</p>
+<p>For this we use [(ngModel)]="Name", this syntax is called banana in a box</p>
+<p>This changes values on both HTML and Component</p>
+<p>now this wont work rigt away, two way binding in angular is not imported by default
+    as importing it by default will make the app heavy on the memory.
+    so we are going to import it in our app module.</p>
+<div class="form-group">
+    <label for="exampleInputEmail1">Template Variables</label>
+    <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" type="text" class="form-control" id="exampleInputEmail1"
+        aria-describedby="emailHelp" placeholder="Enter email">
+</div>

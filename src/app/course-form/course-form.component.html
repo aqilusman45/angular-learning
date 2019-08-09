@@ -1,0 +1,10 @@
+<div>
+    <h1>Course Form</h1>
+    <form>
+        <select>
+            <option selected value="">Choose Course</option>
+            <option *ngFor="let course of courses" value="{{course}}">{{course}}</option>
+        </select>
+        <button class="btn btn-primary" type="submit" >Submit</button>
+    </form>
+</div>
