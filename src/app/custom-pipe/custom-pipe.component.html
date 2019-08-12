@@ -1,0 +1,9 @@
+<h1>Custom Pipe</h1>
+<p>Custom pipe lets you format your data the way you want to and if built in pip is not there. To us this
+    we implement PipeTransform Interface and PipeDecortatior imported from angular/core.
+</p>
+
+<p>We have a summary pipe that returns substring of content</p>
+<p>Complete Content: {{text}}</p>
+<p>Summary: {{text | summary}}</p>
+<p>Summary with optional argument e.g limit of 100 letters: {{text | summary: 100}}</p>

@@ -20,7 +20,17 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
 import { EventFilteringComponent } from './event-filtering/event-filtering.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { PipeComponent } from './pipe/pipe.component';
-
+import { CustomPipeComponent } from './custom-pipe/custom-pipe.component';
+import { SummaryPipe } from './pipes/summary.pipe';
+import { ExerciseIconsComponent } from './exercise-icons/exercise-icons.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ReusableComponentComponent } from './reusable-component/reusable-component.component';
+import { NgContentComponent } from './ng-content/ng-content.component';
+import { NgContainerComponent } from './ng-container/ng-container.component';
+import { ExerciseComponentComponent } from './exercise-component/exercise-component.component';
+import { DirectiveNgifComponent } from './directive-ngif/directive-ngif.component';
+import { DirectiveNgswitchComponent } from './directive-ngswitch/directive-ngswitch.component';
+import { DirectiveNgforComponent } from './directive-ngfor/directive-ngfor.component';
 
 // ngModule is another decorator function
 // with this we convert a simple ts class
@@ -43,12 +53,24 @@ import { PipeComponent } from './pipe/pipe.component';
     EventBindingComponent,
     EventFilteringComponent,
     TwoWayBindingComponent,
-    PipeComponent // cli genereated component automatiically added the component
+    PipeComponent,
+    CustomPipeComponent,
+    SummaryPipe,
+    ExerciseIconsComponent,
+    ReusableComponentComponent,
+    NgContentComponent,
+    NgContainerComponent,
+    ExerciseComponentComponent,
+    DirectiveNgifComponent,
+    DirectiveNgswitchComponent,
+    DirectiveNgforComponent,
+     // cli genereated component automatiically added the component
                     // now angular knows about this component
                     // and we can use its selector in app component html template
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
     FormsModule
   ], // need to add DI for it to work
   providers: [

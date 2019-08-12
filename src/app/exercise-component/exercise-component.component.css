@@ -1,0 +1,21 @@
+.like-component {
+    display: inline-block;
+    text-align: center;
+}
+
+.like-component > .icon-wrapper :hover{
+    cursor: pointer;
+}
+
+.like-component > .icon-wrapper > .icon-tag {
+    font-size: 60px;
+    color: #ccc;
+}
+
+.like-component.count-wrapper::selection {
+    background: transparent;
+}
+
+.like-component > .icon-wrapper .is-liked {
+    color: deeppink;
+}

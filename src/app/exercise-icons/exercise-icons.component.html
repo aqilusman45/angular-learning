@@ -1,0 +1,17 @@
+<h1>Displaying Data and Handling Events</h1>
+<p>Change Icon on event</p>
+<h1>My Approach</h1>
+<fa-icon (click)="onClick()" [icon]="isLiked ? iconActive: iconInActive"></fa-icon>
+
+
+<div class="form-group">
+    <input [(ngModel)]="titleText" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Enter email">
+    <h1>{{ titleText | titlecase }}</h1>
+</div>
+
+<h1>Solution</h1>
+
+<p>class binding</p>
+
+<i class="glyphicon" [class.glyphicon-star]="isLiked" [class.glyphicon-star-empty]="!isLiked" (click)="onClick()"></i>

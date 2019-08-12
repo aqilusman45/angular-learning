@@ -1,0 +1,8 @@
+<h1>Like Component</h1>
+
+<div class="like-component">
+    <div (click)="onClick()" class="icon-wrapper">
+        <fa-icon class="icon-tag" [class.is-liked]="!isLiked" [icon]="icon"></fa-icon>
+    </div>
+    <div class="count-wrapper"><span>{{likeCount}}</span></div>
+</div>

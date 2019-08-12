@@ -1,0 +1,54 @@
+<h1>NgIf Directive</h1>
+<p>there are two types of directives, structural directives and attribute directive</p>
+<p>structural directive modify elements in the DOM while attribute directive only modify attributes</p>
+<p>here we are going to use ngif which is a structural directive</p>
+<p>structural directives are always prefixed by *</p>
+
+<p>here we are going to render a message based on the exisitence of courses</p>
+
+<h2>First Approach</h2>
+<p>using ngif on a div and applying conditions</p>
+
+<div *ngIf="courses.length > 0">
+    List of Courses
+    <ul>
+        <li *ngFor="let course of courses">{{ course }}</li>
+    </ul>
+</div>
+
+<div *ngIf="courses.length === 0">
+    No courses available
+</div>
+
+<h2>Second Approach</h2>
+
+<p>this approach uses ng templates, we will have a div replacing an ng-template </p>
+<p>as per the condition, the div will use template variables as an identifier</p>
+
+<ng-container *ngIf="courses.length > 0 ; then thenTemplate; else elseTemplate"></ng-container>
+<ng-template #thenTemplate>
+    List of Courses
+    <ul>
+        <li *ngFor="let course of courses">{{ course }}</li>
+    </ul>
+</ng-template>
+<ng-template #elseTemplate>
+    No courses available
+</ng-template>
+
+<h2>Third Approach</h2>
+<p>Html attributes and DOM objects both give us a property called hidden which has a boolean value</p>
+<p>We can add our expressions that return boolean and based on the value, the element will be hidden or visible on the page
+    however, in this approach, the element still gets added into the dom. because of which if your tree is large and complex you will have serious performance isssues.
+</p>
+
+<div [hidden]="courses.length === 0">
+    List of Courses
+    <ul>
+        <li *ngFor="let course of courses">{{ course }}</li>
+    </ul>
+</div>
+
+<div [hidden]="courses.length  > 0">
+    No courses available    
+</div>

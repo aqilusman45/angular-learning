@@ -1,3 +1,4 @@
+import { ComponentChangedEvent } from './reusable-component/reusable-component.component';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,8 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'] // this is a css file
 })
 export class AppComponent {
+  tweet = {
+    body: 'This is a tweet content...',
+    isLiked: false,
+    likeCount: 23123
+  };
   title = 'Angular App';
-  // constructor(title: string = 'Angular App' ) {
-  //   this.title = title;
+  // onClick() {
+  //   this.isLiked = !this.isLiked;
   // }
+
+  onComponentChange($event: ComponentChangedEvent) {
+    console.log('Component Changed', $event.newValue);
+  }
 }

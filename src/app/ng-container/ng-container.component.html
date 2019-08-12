@@ -1,0 +1,8 @@
+<h1>NG Container</h1>
+<p>Ng-content replaces the element with the element that is being passed from the parent component</p>
+<p>But this approach adds an extra div which makes the code noisy</p>
+<p>to avoid this we use ng-container in which the entire ng-container tag replaces ng-content tag and brings in the content within it</p>
+<div class="card">
+    <ng-content class="card-title" select=".new-container"></ng-content>
+    <ng-content class="card-body" select=".sibling-container"></ng-content>
+</div>
