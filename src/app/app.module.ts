@@ -31,6 +31,10 @@ import { ExerciseComponentComponent } from './exercise-component/exercise-compon
 import { DirectiveNgifComponent } from './directive-ngif/directive-ngif.component';
 import { DirectiveNgswitchComponent } from './directive-ngswitch/directive-ngswitch.component';
 import { DirectiveNgforComponent } from './directive-ngfor/directive-ngfor.component';
+import { DirectiveNgstyleComponent } from './directive-ngstyle/directive-ngstyle.component';
+import { SafeTraversalComponent } from './safe-traversal/safe-traversal.component';
+import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
+import { InputFormatDirective } from './directives/input-format.directive';
 
 // ngModule is another decorator function
 // with this we convert a simple ts class
@@ -64,6 +68,10 @@ import { DirectiveNgforComponent } from './directive-ngfor/directive-ngfor.compo
     DirectiveNgifComponent,
     DirectiveNgswitchComponent,
     DirectiveNgforComponent,
+    DirectiveNgstyleComponent,
+    SafeTraversalComponent,
+    CustomDirectiveComponent,
+    InputFormatDirective,
      // cli genereated component automatiically added the component
                     // now angular knows about this component
                     // and we can use its selector in app component html template

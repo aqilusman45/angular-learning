@@ -1,0 +1,9 @@
+<h1>Directive Ngstyle</h1>
+<p>instead of binding each stye property with a different attribute tag we can use ng style angular dom property to pass an object as style. </p>
+<button (click)="onClick()" [ngStyle]="{
+                'backgroundColor': canSave ? 'blue': 'gray',
+                'fontWeight': canSave ? 'bold': 'normal',
+                'color': canSave ? 'white' : 'black'
+            }">
+
+    Save</button>

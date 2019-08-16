@@ -1,8 +1,21 @@
 <h1>Like Component</h1>
+<p>Ng Class directive used, instead of biding each class we can pass several classes as key value pairs in an ngclas
+    directive
+</p>
+
+
+<!-- <div class="like-component">
+        <div (click)="onClick()" class="icon-wrapper">
+            <fa-icon class="icon-tag" [class.is-liked]="!isLiked" [icon]="icon"></fa-icon>
+        </div>
+        <div class="count-wrapper"><span>{{likeCount}}</span></div>
+</div> -->
+
+
 
 <div class="like-component">
-    <div (click)="onClick()" class="icon-wrapper">
-        <fa-icon class="icon-tag" [class.is-liked]="!isLiked" [icon]="icon"></fa-icon>
+        <div (click)="onClick()" class="icon-wrapper">
+            <fa-icon class="icon-tag" [ngClass]="{'is-liked': !isLiked }" [icon]="icon"></fa-icon>
+        </div>
+        <div class="count-wrapper"><span>{{likeCount}}</span></div>
     </div>
-    <div class="count-wrapper"><span>{{likeCount}}</span></div>
-</div>
